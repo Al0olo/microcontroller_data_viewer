@@ -12,10 +12,11 @@ fetch(apiUrl, requestOptions)
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }
-    console.log(response.json());
+    console.log(response);
     outputElement.innerHTML = response.best_time;
   })
   .then(data => {
+    console.log(data);
     outputElement.textContent = JSON.stringify(data);
   })
   .catch(error => {
